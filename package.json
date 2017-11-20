@@ -1,0 +1,20 @@
+{
+  "name": "freebox_driver",
+  "version": "1.0.0",
+  "description": "A simple driver for Freebox V6 Revolution for NEEO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NEEO",
+    "Freebox",
+    "Revolution",
+    "driver"
+  ],
+  "author": "Morgan Fromentin",
+  "license": "MIT",
+  "dependencies": {
+    "neeo-sdk": "^0.47.8"
+  }
+}
