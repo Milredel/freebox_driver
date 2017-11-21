@@ -9,7 +9,7 @@ const config = require('./config');
  */
 module.exports.onButtonPressed = function onButtonPressed(name, deviceId) {
     console.log(`[CONTROLLER] ${name} button pressed for device ${deviceId}`);
-    var actionName = name.replace("button-", "");
+    var actionName = name;
     if (config.freebox.mapping[actionName] != undefined) {
         sendRequest(config.freebox.mapping[actionName]);
     }
