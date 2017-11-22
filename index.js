@@ -15,16 +15,22 @@ console.log('------------------------------------------');
 const freeboxDevice = neeoapi.buildDevice('Freebox Revolution')
   .setManufacturer('FREE')
   .addAdditionalSearchToken('box')
-  .setType('ACCESSOIRE')
+  .setType('DVB')
 
   // Then we add the capabilities of the device
-  .addButton({ name: 'POWER TOGGLE', label: 'Bouton ON OFF' })
-  .addButton({ name: 'HOME', label: 'Bouton FREE' })
-  .addButtonGroup("Controlpad")
-  .addButtonGroup("Color Buttons")
-  .addButtonGroup("Numpad")
-  .addButtonGroup("Power")
-  .addButtonGroup("Channel Zapper")
+  .addButton({ name: 'POWER ON', label: 'Power ON' })
+  .addButton({ name: 'POWER OFF', label: 'Power OFF' })
+  .addButton({ name: 'PLAY PAUSE TOGGLE', label: 'Play/Pause' })
+  .addButton({ name: 'HELP', label: 'Infos flux' })
+  .addButtonGroup('Volume')
+  .addButtonGroup('Numpad')
+  .addButtonGroup('Controlpad')
+  .addButtonGroup('Color Buttons')
+  .addButtonGroup('Menu and Back')
+  .addButtonGroup('Channel Zapper')
+  .addButtonGroup('Transport Search')
+  .addButtonGroup('Transport Scan')
+  .addButtonGroup('Record')
   .addButtonHandler(controller.onButtonPressed);
 
 function startSdkExample(brain) {
