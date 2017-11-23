@@ -1,9 +1,10 @@
 'use strict';
 
 const neeoapi = require('neeo-sdk');
-const controller = require('./controller');
+const freeboxController = require('./freeboxController');
+const shieldTVController = require('./shieldTVController');
 
-console.log('Freebox adapter');
+console.log('My custom adapter');
 console.log('------------------------------------------');
 
 /*
@@ -30,18 +31,30 @@ const freeboxDevice = neeoapi.buildDevice('Freebox Revolution')
   .addButtonGroup('Transport Search')
   .addButtonGroup('Transport Scan')
   .addButtonGroup('Record')
-  .addButtonHandler(controller.onButtonPressed);
+  .addButtonHandler(freeboxController.onButtonPressed);
+
+const shieldTVDevice = neeoapi.buildDevice('MY OWN SHIELD TV')
+  .setManufacturer('NVIDIA')
+  .addAdditionalSearchToken('android tv')
+  .setType('MEDIAPLAYER')
+
+  // Then we add the capabilities of the device
+  .addButtonGroup('Power')
+  .addButtonGroup('Volume')
+  .addButtonGroup('Controlpad')
+  .addButtonGroup('Menu and Back')
+  .addButtonHandler(shieldTVController.onButtonPressed);
 
 function startSdkExample(brain) {
   console.log('- Start server');
   neeoapi.startServer({
     brain,
     port: 6336,
-    name: 'freebox-server',
-    devices: [freeboxDevice]
+    name: 'my-custom-server',
+    devices: [freeboxDevice, shieldTVDevice]
   })
   .then(() => {
-    console.log('# READY! use the NEEO app to search for "Freebox Revolution".');
+    console.log('# READY! use the NEEO app to search for "Freebox Revolution" or "SHIELD TV".');
   })
   .catch((error) => {
     //if there was any error, print message out to console

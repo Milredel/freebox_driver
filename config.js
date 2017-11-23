@@ -3,7 +3,7 @@
 //-------------------------------------------
 let config = {};
 config.freebox = {};
-config.neeo = {};
+config.shield = {};
 
 //-------------------------------------------
 // FREEBOX Settings
@@ -66,6 +66,13 @@ config.freebox.mapping = {
     'HELP' : 'help',
     'TV' : 'tv'
 }
+
+//-------------------------------------------
+// NVIDIA SHIELD TV Settings
+//-------------------------------------------
+
+//IP address of the shield tv
+config.shield.ip = "192.168.0.32";
 
 //-------------------------------------------
 module.exports = config;
