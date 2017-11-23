@@ -9,6 +9,9 @@ config.shield = {};
 // FREEBOX Settings
 //-------------------------------------------
 
+//freebox is active
+config.freebox.isActive = true;
+
 //remote code
 config.freebox.remote_code = "61510711";
 
@@ -70,6 +73,9 @@ config.freebox.mapping = {
 //-------------------------------------------
 // NVIDIA SHIELD TV Settings
 //-------------------------------------------
+
+//freebox is active
+config.shield.isActive = true;
 
 //IP address of the shield tv
 config.shield.ip = "192.168.0.32";
