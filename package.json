@@ -15,6 +15,7 @@
   "author": "Morgan Fromentin",
   "license": "MIT",
   "dependencies": {
-    "neeo-sdk": "^0.47.8"
+    "neeo-sdk": "^0.47.8",
+    "request": "^2.83.0"
   }
 }
