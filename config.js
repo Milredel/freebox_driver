@@ -80,5 +80,24 @@ config.shield.isActive = true;
 //IP address of the shield tv
 config.shield.ip = "192.168.0.32";
 
+//button mapping
+config.shield.mapping = {
+    'CURSOR UP' : 'input keyevent 19',
+    'CURSOR DOWN' : 'input keyevent 20',
+    'CURSOR LEFT' : 'input keyevent 21',
+    'CURSOR RIGHT' : 'input keyevent 22',
+    'CURSOR ENTER' : 'input keyevent KEYCODE_ENTER',
+    'ENTER' : 'input keyevent KEYCODE_ENTER',
+    'HOME' : 'input keyevent 3',
+    'MENU' : 'input keyevent 3',
+    'BACK' : 'input keyevent KEYCODE_BACK',
+    'POWER ON' : 'input keyevent KEYCODE_WAKEUP',
+    'POWER OFF' : '',
+    //"off" : 'input keyevent 5'
+    //"power" : 'input keyevent 26'
+    'VOLUME UP' : 'input keyevent 24',
+    'VOLUME DOWN' : 'input keyevent 25'
+}
+
 //-------------------------------------------
 module.exports = config;
