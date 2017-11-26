@@ -79,7 +79,7 @@ config.freebox.mapping = {
 //-------------------------------------------
 
 //freebox is active
-config.shield.isActive = false;
+config.shield.isActive = true;
 
 //IP address of the shield tv
 config.shield.ip = "192.168.0.32";
