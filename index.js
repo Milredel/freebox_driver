@@ -34,6 +34,10 @@ if (config.freebox.isActive) {
     .addButtonGroup('Transport Search')
     .addButtonGroup('Transport Scan')
     .addButtonGroup('Record')
+    .addButton({ name: 'LAUNCH TV', label: 'Launch TV' })
+    .addButton({ name: 'LAUNCH REPLAY', label: 'Launch Replay' })
+    .addButton({ name: 'LAUNCH DEEZER', label: 'Launch Deezer' })
+    .addButton({ name: 'LAUNCH DISK', label: 'Launch Disk' })
     .addButtonHandler(freeboxController.onButtonPressed);
   devices.push(freeboxDevice);
 }

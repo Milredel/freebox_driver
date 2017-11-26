@@ -67,7 +67,11 @@ config.freebox.mapping = {
     'RECORD' : 'record',
     'CHANNEL LIST' : 'list',
     'HELP' : 'help',
-    'TV' : 'tv'
+    'TV' : 'tv',
+    'LAUNCH TV' : ['home', 'home', 'ok'],
+    'LAUNCH REPLAY' : ['home', 'home', 'right', 'down', 'down', 'ok'],
+    'LAUNCH DEEZER' : ['home', 'home', 'right', 'right', 'down', 'ok'],
+    'LAUNCH DISK' : ['home', 'home', 'right', 'right', 'right', 'right', 'ok']
 }
 
 //-------------------------------------------
@@ -75,7 +79,7 @@ config.freebox.mapping = {
 //-------------------------------------------
 
 //freebox is active
-config.shield.isActive = true;
+config.shield.isActive = false;
 
 //IP address of the shield tv
 config.shield.ip = "192.168.0.32";

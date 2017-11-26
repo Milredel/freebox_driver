@@ -45,8 +45,19 @@ module.exports.onButtonPressed = function onButtonPressed(name, deviceId) {
             console.log(e);
         }
     } else {
-        if (config.freebox.mapping[actionName] != undefined) {
-            sendRequest(config.freebox.mapping[actionName]);
+        var action = config.freebox.mapping[actionName];
+        if (action != undefined) {
+            if (Array.isArray(action)) {
+                var totalDelay = 0;
+                action.forEach(function(singleAction, index) {
+                    var delaySupp = 1000;
+                    if (index == 1) delaySupp = 2500;
+                    totalDelay += delaySupp;
+                    setTimeout(sendRequest.bind(null, singleAction), totalDelay);
+                });
+            } else {
+                sendRequest(action);
+            }
         } else {
             console.log("unknown action");
         }
@@ -55,9 +66,10 @@ module.exports.onButtonPressed = function onButtonPressed(name, deviceId) {
 
 function sendRequest(keyValue) {
     try {
-        console.log("preparing and launching request");
+        var myRequest = "http://"+config.freebox.box_identifier+".freebox.fr/pub/remote_control?code="+config.freebox.remote_code+"&key="+keyValue;
+        console.log("preparing and launching request : "+myRequest);
         request({
-            uri: "http://"+config.freebox.box_identifier+".freebox.fr/pub/remote_control?code="+config.freebox.remote_code+"&key="+keyValue,
+            uri: myRequest,
             method: "GET",
             timeout: 10000,
             followRedirect: true,
