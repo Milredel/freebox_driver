@@ -100,7 +100,8 @@ config.shield.mapping = {
     //"off" : 'input keyevent 5'
     //"power" : 'input keyevent 26'
     'VOLUME UP' : 'input keyevent 24',
-    'VOLUME DOWN' : 'input keyevent 25'
+    'VOLUME DOWN' : 'input keyevent 25',
+    'LAUNCH NETFLIX' : 'monkey -p com.netflix.ninja -c android.intent.category.LAUNCHER 1'
 }
 
 //-------------------------------------------

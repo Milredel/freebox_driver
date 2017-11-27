@@ -50,6 +50,7 @@ if (config.shield.isActive) {
     .setType('MEDIAPLAYER')
 
     // Then we add the capabilities of the device
+    .addButton({ name: 'LAUNCH NETFLIX', label: 'Launch Netflix' })
     .addButtonGroup('Power')
     .addButtonGroup('Volume')
     .addButtonGroup('Controlpad')
