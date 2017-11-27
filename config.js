@@ -27,8 +27,8 @@ config.freebox.port = "54243";
 
 //button mapping
 config.freebox.mapping = {
-    'PLAY PAUSE TOGGLE' : 'play',
-    'SKIP FORWARD' :  'next',
+    'PLAY' : 'play',
+    'PAUSE' : 'play',
     'REVERSE' : 'bwd',    
     'FORWARD' : 'fwd',
     'PREVIOUS' : 'prev',

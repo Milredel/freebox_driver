@@ -22,7 +22,6 @@ if (config.freebox.isActive) {
     .setType('DVB')
 
     // Then we add the capabilities of the device
-    .addButton({ name: 'PLAY PAUSE TOGGLE', label: 'Play/Pause' })
     .addButton({ name: 'HELP', label: 'Infos flux' })
     .addButtonGroup('Power')
     .addButtonGroup('Volume')
@@ -31,6 +30,7 @@ if (config.freebox.isActive) {
     .addButtonGroup('Color Buttons')
     .addButtonGroup('Menu and Back')
     .addButtonGroup('Channel Zapper')
+    .addButtonGroup('Transport')
     .addButtonGroup('Transport Search')
     .addButtonGroup('Transport Scan')
     .addButtonGroup('Record')
