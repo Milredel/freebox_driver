@@ -31,6 +31,10 @@ The IP address has to be put in the variable freebox.ip
 
 * To be visible from the NEEO app, the freebox.isActive must be set to true;
 
+## Shortcuts
+
+Shortcuts to TV, Deezer, Replay and Disk are available
+
 
 # NEEO NVIDIA Shield TV Driver via adb
 
@@ -58,3 +62,7 @@ The IP address has to be put in the variable shield.ip
 * In the default mapping, there is no real power off/power on, only a wakeup call. You can use the commands "off" and "power" instead of those defined in "POWER OFF" and "POWER ON".
 
 * To be visible from the NEEO app, the shield.isActive must be set to true;
+
+## Shortcuts
+
+A shortcut to Netflix is available

@@ -31,6 +31,10 @@ L'adresse IP est à renseigner dans la variable freebox.ip
 
 * Pour être visible dans l'application NEEO, la variable freebox.isActive doit être mise à true;
 
+## Raccourcis
+
+Des boutons de raccourcis vers TV, Deezer, Replay et Disque sont disponibles
+
 
 # NEEO NVIDIA Shield TV Driver via adb
 
@@ -58,3 +62,7 @@ L'adresse IP est à renseigner dans la variable shield.ip
 * Dans le mapping, pas d'extinction/allumage digne de ce nom, uniquement un "wakeup" pour sortir le boîtier de veille s'il y est. Vous pouvez utiliser les commandes "off" et "power" en remplacement des "POWER OFF" et "POWER ON" définis par défaut.
 
 * Pour être visible dans l'application NEEO, la variable shield.isActive doit être mise à true;
+
+## Raccourcis
+
+Un bouton de raccourci vers Netflix est disponible
