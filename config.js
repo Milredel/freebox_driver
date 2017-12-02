@@ -45,7 +45,7 @@ config.freebox.mapping = {
     'CURSOR ENTER' : 'ok',
     'ENTER' : 'ok',
     'HOME' : 'home',
-    'MENU' : 'green',
+    'MENU' : 'home',
     'BACK' : 'red',
     'POWER ON' : 'power',
     'POWER OFF' : 'power',
